@@ -6,5 +6,5 @@ import (
 
 type Account struct {
 	ID      uuid.UUID
-	Balance float64
+	Balance int
 }
