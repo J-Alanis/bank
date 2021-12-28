@@ -1,0 +1,30 @@
+{
+    "title": "moneyWithdrawn",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The event unique id."
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+            "account":{
+                "type": "string",
+                "format": "uuid",
+                "description": "The account were the money was withdraw unique id."
+            },
+            "amount":{
+                "type": "integer",
+                "description": "The ammount of cents withdrawn of the account."
+            }
+        }
+      },
+      "CreatedAt": {
+      "type": "string",
+      "description": "The date when the event happened (YYYY-MM-DD hh:mm:ss)."
+      }    
+    }
+}
+ 
