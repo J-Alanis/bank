@@ -7,8 +7,8 @@
         "description": "The account unique id."
       },
       "Balance": {
-        "type": "number",
-        "description": "The total of money on the account, wich must be equal or greater than zero."
+        "type": "integer",
+        "description": "The total of money (in cents) on the account, wich must be equal or greater than zero."
       }
     }
 }
