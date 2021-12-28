@@ -2,6 +2,8 @@ package valueobject
 
 import (
 	"time"
+
+	"github.com/google/uuid"
 )
 
 type Transaction struct {
