@@ -1,0 +1,10 @@
+{
+    "title": "SavingsAccount",
+    "type": "object",
+    "properties": {
+      "Account": {
+        "type": "object",
+        "description": "The root entity of the agggregate."
+      }
+    }
+}
