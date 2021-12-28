@@ -1,0 +1,22 @@
+{
+    "title": "Transaction",
+    "type": "object",
+    "properties": {
+      "Amount": {
+        "type": "integer",
+        "description": "The amount of cents taken or deposited on the account"
+      },
+      "DepositOrWithdraw": {
+        "type": "string",
+        "description": "The type of transaction."
+      },
+      "Account": {
+        "type": "integer",
+        "description": "The ID of the account afected by the transaction."
+      },
+      "CreatedAt": {
+        "type": "string",
+        "description": "The date when the transaction was made."
+      }
+    }
+}
