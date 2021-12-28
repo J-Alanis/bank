@@ -8,7 +8,8 @@
       },
       "Balance": {
         "type": "integer",
-        "description": "The total of money (in cents) on the account, wich must be equal or greater than zero."
+        "description": "The total of money (in cents) on the account, wich must be equal or greater than zero.",
+        "minimum": 0
       }
     }
 }
