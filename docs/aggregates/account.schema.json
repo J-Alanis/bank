@@ -1,0 +1,32 @@
+{
+    "title": "Account",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "The account unique id."
+      },
+      "transactions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "integer",
+              "description": "The amount of cents taken or deposited on the account"
+            },
+            "type": {
+              "enum": ["deposit", "withdrawal"],
+              "description": "The type of transaction."
+            },
+            "createdAt": {
+              "type": "string",
+              "description": "The date when the transaction was made (YYYY-MM-DD hh:mm:ss)."
+            }
+          }
+        }
+      }
+      
+    }
+}
