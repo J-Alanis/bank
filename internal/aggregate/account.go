@@ -6,22 +6,22 @@ import (
 	"github.com/google/uuid"
 )
 
-type Account struct {
+type account struct {
 	id           uuid.UUID
-	transactions []Transaction
+	transactions []transaction
 }
 
-type Transaction struct {
+type transaction struct {
 	amount    int
 	tType     string
 	createdAt time.Time
 }
 
-func NewAcount() Account {
+func NewAcount() account {
 
-	return Account{
+	return account{
 		id:           uuid.New(),
-		transactions: make([]Transaction, 0),
+		transactions: make([]transaction, 0),
 	}
 
 }
