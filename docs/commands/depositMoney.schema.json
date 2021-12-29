@@ -1,0 +1,35 @@
+{
+  "title": "depositMoney",
+  "type": "object",
+  "properties": {
+      "id": {
+          "type":"string",
+          "format": "uuid",
+          "description": "The command unique ID (mostly for debugging purposes)"
+      },
+      "correlationID": {
+          "type":"string",
+          "format": "uuid",
+          "description": "The command unique ID (mostly for debugging purposes)"
+      },
+      "type": {
+          "format": "string",
+          "description": "The command name (i.e. createAccount)"
+      },
+      "data": {
+        "type": "object",
+        "properties":{"amount": {
+          "type": "integer",
+          "description": "The amount of cents to deposit.",
+          "minimum": 1
+          },
+          "id":{
+            "type": "string",
+            "format": "uuid",
+            "description": "the account where the money is being deposited"
+          }
+        },
+        "required": ["amount", "account"]
+      }
+  }
+}

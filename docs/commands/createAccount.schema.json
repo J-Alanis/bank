@@ -1,0 +1,22 @@
+{
+    "title": "createAccount",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type":"string",
+            "format": "uuid",
+            "description": "The command unique ID (mostly for debugging purposes)"
+        },
+        "correlationID": {
+            "type":"string",
+            "format": "uuid",
+            "description": "The command unique ID (mostly for debugging purposes)"
+        },
+        "type": {
+            "format": "string",
+            "description": "The command name (i.e. createAccount)"
+        },
+        "data": {}
+    }
+}
+  
