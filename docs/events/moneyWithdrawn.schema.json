@@ -7,21 +7,37 @@
         "format": "uuid",
         "description": "The event unique id."
       },
+      "aggregateID":{
+        "type": "string",
+        "format": "uuid",
+        "description": "The account were the money was withdraw unique id."
+      },
+      "aggregateName":{
+        "type": "string",
+        "description": "The name of the aggregate being affected by the event"
+      },
+      "correlationID":{
+        "type":"string",
+        "description": "An agrupation ID for correlated events"
+      },
+      "aggregateVersion":{
+        "type":"integer",
+        "description": "The version of the aggregate after being modified by this event"
+      },
+      "type":{
+        "type":"string",
+        "description": "The event type (ie. moneyWithdrawn)"
+      },
       "data": {
         "type": "object",
-        "properties": {
-            "account":{
-                "type": "string",
-                "format": "uuid",
-                "description": "The account were the money was withdraw unique id."
-            },
+        "properties": {   
             "amount":{
                 "type": "integer",
                 "description": "The ammount of cents withdrawn of the account."
             }
         }
       },
-      "CreatedAt": {
+      "createdAt": {
       "type": "string",
       "description": "The date when the event happened (YYYY-MM-DD hh:mm:ss)."
       }    

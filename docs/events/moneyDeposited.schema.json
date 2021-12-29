@@ -1,30 +1,45 @@
 {
-    "title": "moneyDeposited",
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "string",
-        "format": "uuid",
-        "description": "The event unique id."
-      },
-      "data": {
-        "type": "object",
-        "properties": {
-            "account":{
-                "type": "string",
-                "format": "uuid",
-                "description": "The account were the money was deposied unique id."
-            },
-            "amount":{
-                "type": "integer",
-                "description": "The ammount of cents deposited on the account."
-            }
-        }
-      },
-      "CreatedAt": {
+  "title": "moneyDeposited",
+  "type": "object",
+  "properties": {
+    "id": {
       "type": "string",
-      "description": "The date when the event happened (YYYY-MM-DD hh:mm:ss)."
-      }    
-    }
+      "format": "uuid",
+      "description": "The event unique id."
+    },
+    "aggregateID":{
+      "type": "string",
+      "format": "uuid",
+      "description": "The account were the money was deposited unique id."
+    },
+    "aggregateName":{
+      "type": "string",
+      "description": "The name of the aggregate being affected by the event"
+    },
+    "correlationID":{
+      "type":"string",
+      "description": "An agrupation ID for correlated events"
+    },
+    "aggregateVersion":{
+      "type":"integer",
+      "description": "The version of the aggregate after being modified by this event"
+    },
+    "type":{
+      "type":"string",
+      "description": "The event type (ie. moneyWithdrawn)"
+    },
+    "data": {
+      "type": "object",
+      "properties": {   
+          "amount":{
+              "type": "integer",
+              "description": "The ammount of cents deposited on the account."
+          }
+      }
+    },
+    "createdAt": {
+    "type": "string",
+    "description": "The date when the event happened (YYYY-MM-DD hh:mm:ss)."
+    }    
+  }
 }
- 
